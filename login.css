@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img { display: block;}
+
+:root {
+    --BGCOLOR:#333;
+    --BGIMAGE:royalblue, lightcoral;
+    --BGBOX:#1F2145;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    background-color: var(--BGCOLOR);
+    background-image: linear-gradient(var(--BGIMAGE));
+    min-height: 100vh;
+
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+main {
+    padding: 1em 0;
+    flex-grow: 1;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-square {
+    /* position: relative; */
+    display: flex;
+    flex-flow: column nowrap;
+    
+    /* for inputs and button both */
+    align-items: center;
+    
+    /* gap: 2em; */
+
+    padding-bottom: 2em;
+    background-image: linear-gradient(var(--BGIMAGE));
+    border-radius: 10% 10% 20% 20%;
+
+    /* border: 1px solid white; */
+    box-shadow: 2px 2px 20px -10px white;
+
+    z-index: 1;
+}
+
+.logo {
+    width:50%;
+    position: relative;
+    top: -120px;
+    /* align-self: center; */
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 2px 2px 20px 0px white;
+
+}
+
+.username, .pass {
+    background-color: #56588e;
+    display: flex;
+    width: 300px;
+    /* gap: 0.25em; */
+
+    /* for inputs */
+    justify-content: start;
+    align-items: stretch;
+    /* border: 2px solid #1F2145; */
+
+}
+
+.username input, .pass input {
+    width: 100%;
+    padding: 0 1em;
+    font-size: 0.8em;
+    background-color: #3264a0;
+    border: none;
+}
+
+input::placeholder {
+    color: whitesmoke;
+    letter-spacing: 2px;
+}
+
+.lock-icon, .user-icon {
+    width:20%;
+    background-color:#56588e;
+}
+
+.lock-icon img, .user-icon img {
+    width: 100%;
+    height: auto;
+    padding: 0.15em;
+    border: 2px solid #1F2145;
+
+}
+
+.button {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 0.1em;
+    position: relative;
+
+}
+
+.button button {
+    padding: 0.5em;
+    border: none;
+    background-color: #3264a0;
+    opacity: 50%;
+
+    position: absolute;
+    top: -15px;
+
+    width: 400px;
+    height: 60px;
+
+    border-radius: 0 0 50% 50%;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 1em;
+
+    /* border:1px solid white; */
+    box-shadow: 5px 5px 50px 0px white;    
+}
+
+.button button p {
+    transform: translateY(5px);
+}
+
+.username:hover, .username:focus, .pass:hover, .pass:focus {
+    box-shadow: 5px 5px 50px 10px white;
+    transition: all 1s;
+}
+
+.username:hover img, .username:focus img, .pass:hover img, .pass:focus img{
+    border:1px solid white;
+    /* border: none; */
+    box-shadow: 2px 2px 10px 10px white;
+    transform: scale(0.9);
+    transition: all 3s;
+}
+
+
+.button button:hover {
+    opacity: 100%;
+    box-shadow: 5px 5px 50px 10px white;
+    transition: all 2s;
+}
+
+
+
