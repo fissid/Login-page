@@ -12,6 +12,8 @@ img { display: block;}
     --BGBOX:#1F2145;
     --BGINPUT: #56588e;
     --FONTCOLOR:whitesmoke;
+    --BGIMAGEDARK: #1F2145, #333, #1F2145;
+    --FONTCOLORDARK: #000;
 }
 
 body {
@@ -58,7 +60,6 @@ main {
 .box {
     position: relative;
     top: -40px;
-    
 }
 
 .login-square:hover, .login-square:focus-within {
@@ -198,5 +199,90 @@ input::placeholder {
     opacity: 100%;
 }
 
+@media (prefers-color-scheme: dark) {
+    main {
+        background-image: linear-gradient(var(--BGIMAGEDARK));
+    }
 
+    .login-square {
+        background-image: linear-gradient(var(--BGIMAGEDARK));
+    }
 
+    input::placeholder{
+        color: var(--FONTCOLORDARK);
+        font-weight: 550;
+    }
+    
+    .username:hover, .username:focus-within, .pass:hover, .pass:focus-within {
+        box-shadow: 5px 5px 50px 10px #555;
+    }
+
+    .button button:hover, .button button:focus-within {
+        box-shadow: 5px 5px 50px 20px #555;
+    }
+
+    .button button {
+        color: var(--FONTCOLORDARK);
+    }
+}
+
+@media screen and (max-width: 540px) {
+
+    .login-square {
+        margin: 0 30px;
+    }
+
+    .button button {
+        width: 300px;
+    }
+    
+}
+
+@media screen and (max-width: 481px) {
+    .login-square {
+        margin: 0 30px;
+    }
+
+    .username, .pass {
+        margin: 0 40px;
+        width: auto;
+        font-size: 0.75em;
+    }
+
+    .bottom {
+        position: relative;
+        top: -10%;
+        font-size: 0.55em;
+    }
+
+    .button button {
+        width: 250px;
+        height: 60px;
+        top: -20px;
+    }
+
+    .logo {
+        top: -90px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .username, .pass {
+        font-size: 0.5em;
+    }
+
+    .bottom {
+        font-size: 0.4em;
+    }
+
+    .remember input {
+        width: 12px;
+        height: 12px;
+    }
+
+    .button button {
+        width: 170px;
+        height: 50px;
+        font-size: 0.7em;
+    }
+}
